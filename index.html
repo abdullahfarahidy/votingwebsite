@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Madeline Martin">
+    <title id="dom">Simplevote</title>
+
+    <meta name="discription"
+        content="The 1932 United States quadrennial presidential election included four candidates: Franklin D. Roosevelt,Herbert Hoover,Norman Thomas and William Z. Foster">
+</head>
+
+<body class="body">
+    <script>
+        let english = document.getElementById("english");
+        let arabic = document.getElementById("arabic");
+        let german = document.getElementById("german");
+        let spanish = document.getElementById("spanish")
+        let title = document.getElementById("title")
+        let welcome = document.getElementById("welcome")
+        let dom = document.getElementById("dom")
+        let frank = document.getElementById("frank")
+        let frankmore = document.getElementById("frankmore")
+        let herbert = document.getElementById("herbert")
+        let herbertmore = document.getElementById("herbertmore")
+        let norman = document.getElementById("norman")
+        let normanmore = document.getElementById("normanmore")
+        let william = document.getElementById("william")
+        let williammore = document.getElementById("williammore")
+        let rank = document.getElementById("rank")
+        let st = document.getElementById("st")
+        let nd = document.getElementById("nd")
+        let rd = document.getElementById("rd")
+        let th = document.getElementById("th")
+
+
+
+        english.onclick = () => {
+            setLanguage("english");
+            localStorage.setItem("Lang", "english");
+        };
+
+        arabic.onclick = () => {
+            setLanguage("arabic");
+            localStorage.setItem("Lang", "arabic");
+        };
+        german.onclick = () => {
+            setLanguage("german");
+            localStorage.setItem("Lang", "german");
+        };
+        spanish.onclick = () => {
+            setLanguage("spanish");
+            localStorage.setItem("Lang", "spanish");
+        };
+
+        onload = () => {
+            setLanugage(localStorage.getItem("Lang"));
+        };
+        function setLanugage(getLanuage) {
+            if (getLanuage === "english") {
+                title.innerHTML = "Simplevote";
+                welcome.innerHTML = "Welcome to The quadrennial Presidential Election of 1932 !";
+                dom.innerHTML = "Simplevote";
+                frank.innerHTML = "Franklin D. Roosevelt";
+                frankmore.innerHTML = "Learn more";
+                herbert.innerHTML = "Herbert Hoover";
+                herbertmore.innerHTML = "Learn more";
+                norman.innerHTML = "Norman thomas";
+                normanmore.innerHTML = "Learn more";
+                william.innerHTML = "William Z. Foster";
+                williammore.innerHTML = "Learn more";
+                rank.innerHTML = "Simply vote by clicking on the candidate picture and dropping it to your preffered choice positoin below:";
+                st.innerHTML = "First";
+                nd.innerHTML = "Second";
+                rd.innerHTML = "Third";
+                th.innerHTML = "Fourth";
+
+            }
+            else if (getLanuage === "arabic") {
+                title.innerHTML = "صوتببساطة";
+                welcome.innerHTML = "مرحبا بك في الانتخابات الرئاسية الرباعية لعام 1932!";
+                dom.innerHTML = "صوتببساطة";
+                frank.innerHTML = "فرانك د روزفيلت";
+                frankmore.innerHTML = "تعلم المزيد";
+                herbert.innerHTML = "هيربرت هوفر";
+                herbertmore.innerHTML = "تعلم المزيد";
+                norman.innerHTML = "نورمان توماس";
+                normanmore.innerHTML = "تعلم المزيد";
+                william.innerHTML = "ويليام زي فوستر";
+                williammore.innerHTML = "تعلم المزيد";
+                rank.innerHTML = "ما عليك سوى التصويت بالنقر فوق صورة المرشح وإسقاطها في موضع الاختيار المفضل لديك أدناه:";
+                st.innerHTML = "الاول";
+                nd.innerHTML = "الثاني";
+                rd.innerHTML = "الثالث";
+                th.innerHTML = "الرابع";
+
+            }
+            else if (getLanuage === "german") {
+                title.innerHTML = "einfachabstimmen";
+                welcome.innerHTML = "Willkommen zu den vierjährlichen Präsidentschaftswahlen von 1932!";
+                dom.innerHTML = "einfachabstimmen";
+                frank.innerHTML = "Franklin D. Roosevelt";
+                frankmore.innerHTML = "erfahren Sie mehr";
+                herbert.innerHTML = "Herbert Hoover";
+                herbertmore.innerHTML = "erfahren Sie mehr";
+                norman.innerHTML = "Norman thomas";
+                normanmore.innerHTML = "erfahren Sie mehr";
+                william.innerHTML = "William Z. Foster";
+                williammore.innerHTML = "erfahren Sie mehr";
+                rank.innerHTML = "Stimmen Sie einfach ab, indem Sie auf das Kandidatenbild klicken und es unten auf die von Ihnen bevorzugte Position ziehen:";
+                st.innerHTML = "Erste";
+                nd.innerHTML = "Sekunde";
+                rd.innerHTML = "Dritter";
+                th.innerHTML = "vierte";
+
+            }
+            else if (getLanuage === "spanish") {
+                title.innerHTML = "simplementevota";
+                welcome.innerHTML = "¡Bienvenidos a las elecciones presidenciales cuatrienales de 1932!";
+                dom.innerHTML = "simplementevota";
+                frank.innerHTML = "Franklin D. Roosevelt";
+                frankmore.innerHTML = "aprende más";
+                herbert.innerHTML = "Herbert Hoover";
+                herbertmore.innerHTML = "aprende más";
+                norman.innerHTML = "Thomas normando";
+                normanmore.innerHTML = "aprende más";
+                william.innerHTML = "Guillermo Z. Foster";
+                williammore.innerHTML = "aprende más";
+                rank.innerHTML = "Simplemente vote haciendo clic en la imagen del candidato y colocándola en la posición de su elección preferida a continuación:";
+                st.innerHTML = "Primero";
+                nd.innerHTML = "Segundo";
+                rd.innerHTML = "Tercero";
+                th.innerHTML = "Cuarto";
+
+            }
+        }
+
+    </script>
+    <header>
+        <a class="logo"><img class="ligm" src="logo.jpg" alt="logo" height="50" width="50"><strong><em
+                    id="title">Simplevote</em></strong></a>
+        <div class="log1">
+            <a href="#"><img src="american.png" alt=""></a>
+        </div>
+        <nav class="butt">
+            <a href="#about" >About</a>
+            <a href="#first" >Candidates</a>
+            <a href="#voting" class="fav">Vote</a>
+        </nav>
+        <nav class="rit">
+            <div class="lang-menu">
+                <div class="selected-lang">
+                    English
+                </div>
+                <ul>
+                    <li>
+                        <a href="#" class="ar" id="arabic">Arabic</a>
+                    </li>
+                    <li>
+                        <a href="#" class="en" id="english">English</a>
+                    </li>
+                    <li>
+                        <a href="#" class="de" id="german">German</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fr" id="spanish">Spanish</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h2 id="welcome">Welcome to The quadrennial Presidential Election of 1932 !</h2>
+    </div>
+    <section id="about">
+        <div class="abouty"><strong>About The Mission</strong></div>
+        <div class="pasage"> &nbsp; Ranked Choice Voting is the future of voting. With many states trying it out and
+            many elections <br>for places like schools using them in their votes. <br>You’ll see that this will help
+            increase your likelihood to vote and help you stay more engaged.<br>Hence,you are more encouraged to explore
+            the candidates and express your opinion.</div>
+    </section>
+    <div class="container">
+        <div class="candidate" id="first">
+            <div class="pic">
+                <img src="Franklin D. Roosevelt1.jpg" alt="Franklin D.Roosvelt" height="300" width="300">
+            </div>
+            <div class="info">
+                <h3 id="frank">Franklin D. Roosevelt</h3>
+                <p></p>
+            </div>
+            <a href="https://www.whitehouse.gov/about-the-white-house/presidents/franklin-d-roosevelt/" class="lr"
+                id="frankmore">Learn
+                more</a>
+        </div>
+        <div class="candidate" id="second">
+            <div class="pic">
+                <img src="Herbert Hoover2.jpg" alt="Herbert Hoover" height="300" width="300">
+            </div>
+            <div class="info">
+                <h3 id="herbert">Herbert Hoover</h3>
+                <p></p>
+            </div>
+            <a href="https://www.whitehouse.gov/about-the-white-house/presidents/herbert-hoover/" class="lr1"
+                id="herbertmore">Learn
+                more</a>
+        </div>
+        <div class="candidate" id="third">
+            <div class="pic">
+                <img src="norman thomas 3.jpg" alt="norman thomas" height="300" width="300">
+            </div>
+            <div class="info">
+                <h3 id="norman">Norman thomas</h3>
+
+                <p></p>
+            </div>
+            <a href="https://www.britannica.com/biography/Norman-Mattoon-Thomas" class="lr2" id="normanmore">Learn
+                more</a>
+        </div>
+        <div class="candidate" id="fourth">
+            <div class="pic">
+                <img src="William Z. Foster4.jpg" alt="William Z. Foster" height="300" width="300">
+            </div>
+            <div class="info">
+                <h3 id="william">William Z. Foster</h3>
+                <p></p>
+            </div>
+            <a href="https://www.britannica.com/biography/William-Z-Foster" class="lr3" id="williammore">Learn more</a>
+        </div>
+    </div>
+    <div class="vote" id="rank"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <strong> Directions:</strong> click and drag your favorite to least favorite in order
+    </div>
+    <section class="voter" id="voting">
+        <div class="flex">
+            <div class="empty">
+                <img src="Franklin D. Roosevelt1.jpg" class="draggable" draggable="true">
+            </div>
+
+            <div class="empty">
+                <img src="Herbert Hoover2.jpg" class="draggable" draggable="true">
+            </div>
+
+            <div class="empty">
+                <img src="norman thomas 3.jpg" class="draggable" draggable="true">
+            </div>
+
+            <div class="empty">
+                <img src="William Z. Foster4.jpg" class="draggable" draggable="true">
+            </div>
+        </div>
+        <div class="choice">
+            <div class="empty" id="st">
+                <p class="wo">Second</p>
+            </div>
+            <div class="empty" id="nd">
+                <p class="wo">First</p>
+            </div>
+            <div class="empty" id="rd">
+                <p class="wo">Third</p>
+            </div>
+            <div class="empty" id="th">
+                <p class="wo">Fourth</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li>
+                        <a href="#">The Administration</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Executive Offices</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact Us </a>
+                    </li>
+
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h4>Follow us on</h4>
+
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="facebook-logo.png" alt="facebook link" />
+                    </a>
+                    <a href="#">
+                        <img src="twitter-logo.png" alt="twitter link" />
+                    </a>
+
+                    <a href="#">
+                        <img src="instagram-logo.png" alt="instagram link" />
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="outer-footer">
+            Copyright &copy;Farahidy .All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
